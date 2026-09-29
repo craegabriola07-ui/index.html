@@ -1,161 +1,548 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>TEAMNOY</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #08050d;
-  color: white;
-  min-height: 100vh;
+body{
+    font-family:Inter,Arial,sans-serif;
+    background:
+        radial-gradient(circle at 50% 0%,#5c1685 0%,#1b0928 28%,#08050d 65%);
+    color:#fff;
+    min-height:100vh;
 }
 
-header {
-  padding: 25px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #24152f;
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(5,3,9,.65);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
-.logo {
-  font-size: 25px;
-  font-weight: bold;
-  color: #c875ff;
-  text-shadow: 0 0 15px #9b35ff;
+.logo{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:#d889ff;
+    text-shadow:0 0 20px #a52cff;
 }
 
-.btn {
-  background: #9b35ff;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 20px #7b20d8;
+.navlinks{
+    display:flex;
+    gap:25px;
 }
 
-.hero {
-  text-align: center;
-  padding: 90px 20px 50px;
+.navlinks a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:14px;
+    transition:.2s;
 }
 
-.hero h1 {
-  font-size: 55px;
-  color: #d58aff;
-  text-shadow: 0 0 25px #9b35ff;
+.navlinks a:hover{
+    color:#d889ff;
 }
 
-.hero p {
-  margin-top: 15px;
-  color: #aaa;
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:90px 20px 55px;
 }
 
-.card {
-  width: 90%;
-  max-width: 700px;
-  margin: 35px auto;
-  padding: 30px;
-  background: #100b18;
-  border: 1px solid #6d249b;
-  border-radius: 18px;
-  box-shadow: 0 0 30px #36104d;
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border:1px solid #7020a0;
+    background:rgba(135,38,190,.15);
+    color:#d98cff;
+    border-radius:30px;
+    font-size:12px;
+    margin-bottom:22px;
 }
 
-.card h2 {
-  margin-bottom: 20px;
-  color: #d58aff;
+.hero h1{
+    font-size:clamp(48px,10vw,90px);
+    font-weight:800;
+    line-height:1;
+    color:#fff;
+    text-shadow:
+        0 0 15px #a62eff,
+        0 0 45px rgba(166,46,255,.5);
 }
 
-input {
-  width: 100%;
-  padding: 14px;
-  margin: 8px 0 15px;
-  border-radius: 9px;
-  border: 1px solid #54206f;
-  background: #08050d;
-  color: white;
-  outline: none;
+.hero h1 span{
+    color:#c45cff;
 }
 
-input:focus {
-  border-color: #c05cff;
-  box-shadow: 0 0 10px #7b20d8;
+.hero p{
+    max-width:600px;
+    margin:22px auto 0;
+    color:#aaa;
+    line-height:1.7;
 }
 
-.join {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  background: #9b35ff;
-  padding: 14px;
-  border-radius: 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* MAIN */
+
+.container{
+    width:90%;
+    max-width:1050px;
+    margin:auto;
 }
 
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #666;
+/* WORLD CARD */
+
+.world-card{
+    position:relative;
+    overflow:hidden;
+    padding:35px;
+    border-radius:24px;
+    background:
+        linear-gradient(145deg,
+        rgba(39,13,55,.95),
+        rgba(13,7,20,.98));
+    border:1px solid rgba(190,76,255,.35);
+    box-shadow:
+        0 0 50px rgba(145,36,210,.2),
+        inset 0 1px rgba(255,255,255,.05);
+}
+
+.world-card:before{
+    content:"";
+    position:absolute;
+    width:220px;
+    height:220px;
+    background:#a92eff;
+    filter:blur(100px);
+    opacity:.12;
+    right:-80px;
+    top:-80px;
+}
+
+.world-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.world-title{
+    font-size:13px;
+    color:#9c9c9c;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.status{
+    color:#77ffb2;
+    font-size:12px;
+}
+
+.world-name{
+    font-size:clamp(32px,7vw,60px);
+    font-weight:800;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.world-description{
+    color:#999;
+    margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 23px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+    transition:.2s;
+    cursor:pointer;
+}
+
+.primary{
+    color:white;
+    background:linear-gradient(135deg,#b22cff,#7920bd);
+    box-shadow:0 0 25px rgba(165,44,255,.35);
+}
+
+.primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 35px rgba(165,44,255,.55);
+}
+
+.secondary{
+    color:#ddd;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.secondary:hover{
+    background:rgba(255,255,255,.09);
+}
+
+/* INFO GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:20px;
+}
+
+.info{
+    padding:25px;
+    background:rgba(17,9,23,.85);
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:18px;
+}
+
+.info-icon{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:rgba(170,48,255,.13);
+    color:#cf70ff;
+    margin-bottom:18px;
+}
+
+.info h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.info p{
+    color:#888;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* JOIN SECTION */
+
+.join-section{
+    margin-top:20px;
+    padding:40px;
+    text-align:center;
+    border-radius:22px;
+    background:linear-gradient(
+        135deg,
+        rgba(106,23,145,.25),
+        rgba(20,7,28,.8)
+    );
+    border:1px solid rgba(187,63,255,.2);
+}
+
+.join-section h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.join-section p{
+    color:#999;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:50px 20px 35px;
+    color:#666;
+    font-size:12px;
+}
+
+.footer-logo{
+    color:#c45cff;
+    font-weight:800;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    .navlinks{
+        display:none;
+    }
+
+    .hero{
+        padding:70px 20px 40px;
+    }
+
+    .world-card{
+        padding:25px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .join-section{
+        padding:30px 20px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">TEAMNOY</div>
-  <a class="btn" href="#world">ENTER</a>
-</header>
+<nav>
+
+    <div class="logo">TEAMNOY</div>
+
+    <div class="navlinks">
+        <a href="#world">World</a>
+        <a href="#about">About</a>
+        <a href="#join">Join</a>
+    </div>
+
+</nav>
+
 
 <section class="hero">
-  <h1>TEAMNOY</h1>
-  <p>Your world. Your community.</p>
+
+    <div class="badge">TEAMNOY COMMUNITY</div>
+
+    <h1>
+        WELCOME TO<br>
+        <span>TEAMNOY</span>
+    </h1>
+
+    <p>
+        A community built for players, friends and people
+        who want to be part of the team.
+    </p>
+
 </section>
 
-<div class="card" id="world">
-  <h2>WORLD INFORMATION</h2>
 
-  <label>World Name</label>
-  <input id="worldName" value="TEAMNOY WORLD">
+<main class="container">
 
-  <label>SAMPLE SITE NOYNOY</label>
-  <input id="worldLink" value="https://example.com">
 
-  <a id="joinButton" class="join" href="https://example.com" target="_blank">
-    ENTER WORLD
-  </a>
-</div>
+<section class="world-card" id="world">
+
+    <div class="world-top">
+
+        <div class="world-title">
+            CURRENT WORLD
+        </div>
+
+        <div class="status">
+            ● ONLINE
+        </div>
+
+    </div>
+
+
+    <!-- PALITAN ANG WORLD NAME DITO -->
+
+    <div class="world-name" id="worldName">
+        TEAMNOY
+    </div>
+
+    <div class="world-description">
+        Join our current world and become part of TeamNoy.
+    </div>
+
+
+    <div class="buttons">
+
+        <!-- PALITAN ANG WORLD LINK DITO -->
+
+        <a
+        class="btn primary"
+        id="worldButton"
+        href="https://example.com"
+        target="_blank">
+            ENTER WORLD
+        </a>
+
+        <button
+        class="btn secondary"
+        onclick="copyWorld()">
+            COPY WORLD
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="grid" id="about">
+
+    <div class="info">
+
+        <div class="info-icon">★</div>
+
+        <h3>Team Community</h3>
+
+        <p>
+            Meet other players and become part
+            of the TeamNoy community.
+        </p>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-icon">◆</div>
+
+        <h3>Current World</h3>
+
+        <p>
+            Check the current world above and
+            enter whenever you want.
+        </p>
+
+    </div>
+
+
+    <div class="info">
+
+        <div class="info-icon">✓</div>
+
+        <h3>Always Updated</h3>
+
+        <p>
+            World information can be updated
+            whenever your team changes worlds.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="join-section" id="join">
+
+    <h2>WANT TO JOIN TEAMNOY?</h2>
+
+    <p>
+        Enter the current world and connect
+        with the community.
+    </p>
+
+    <a
+    class="btn primary"
+    id="joinButton"
+    href="https://example.com"
+    target="_blank">
+        JOIN TEAMNOY
+    </a>
+
+</section>
+
+
+</main>
+
 
 <footer>
-  © 2026 TEAMNOY
+
+    <div class="footer-logo">
+        TEAMNOY
+    </div>
+
+    <div>
+        © 2026 TEAMNOY. All rights reserved.
+    </div>
+
 </footer>
 
-<script>
-const nameInput = document.getElementById("worldName");
-const linkInput = document.getElementById("worldLink");
-const button = document.getElementById("joinButton");
 
-function updateWorld() {
-  button.textContent = "ENTER " + nameInput.value;
-  button.href = linkInput.value;
+<script>
+
+/*
+========================================
+TEAMNOY WORLD SETTINGS
+========================================
+
+PALITAN LANG ANG DALAWANG VALUE NA ITO.
+
+WORLD NAME:
+TEAMNOY
+
+========================================
+*/
+
+const WORLD_NAME = "TEAM NOY SAMPLE SITE";
+
+
+/* AUTOMATIC — WAG GALAWIN */
+
+document.getElementById("worldName").textContent = WORLD_NAME;
+
+document.getElementById("worldButton").href = WORLD_LINK;
+
+document.getElementById("joinButton").href = WORLD_LINK;
+
+
+function copyWorld(){
+
+    navigator.clipboard.writeText(WORLD_NAME);
+
+    const button = document.querySelector(".secondary");
+
+    const oldText = button.textContent;
+
+    button.textContent = "COPIED!";
+
+    setTimeout(() => {
+
+        button.textContent = oldText;
+
+    },1500);
+
 }
 
-nameInput.addEventListener("input", updateWorld);
-linkInput.addEventListener("input", updateWorld);
 </script>
 
 </body>
-  </html>
+</html>
