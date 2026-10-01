@@ -1,541 +1,304 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TEAMNOY</title>
+<!-- SOCIAL COMMUNITY SECTION -->
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-*{
+.social-section{
+    width:90%;
+    max-width:1050px;
+    margin:70px auto 0;
+}
+
+.social-title{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.social-title .small-title{
+    color:#b75cff;
+    font-size:12px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.social-title h2{
+    font-family:Georgia,serif;
+    font-size:38px;
+    font-weight:500;
+    letter-spacing:2px;
     margin:0;
-    padding:0;
-    box-sizing:border-box;
 }
 
-body{
-    font-family:Inter,Arial,sans-serif;
-    background:
-        radial-gradient(circle at 50% 0%,#5c1685 0%,#1b0928 28%,#08050d 65%);
-    color:#fff;
-    min-height:100vh;
+.social-title p{
+    color:#888;
+    margin-top:12px;
 }
 
-/* NAVBAR */
-
-nav{
-    width:100%;
-    padding:22px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid rgba(255,255,255,.08);
-    background:rgba(5,3,9,.65);
-    backdrop-filter:blur(15px);
-    position:sticky;
-    top:0;
-    z-index:10;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:800;
-    letter-spacing:1px;
-    color:#d889ff;
-    text-shadow:0 0 20px #a52cff;
-}
-
-.navlinks{
-    display:flex;
+.social-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
     gap:25px;
 }
 
-.navlinks a{
-    color:#aaa;
-    text-decoration:none;
-    font-size:14px;
-    transition:.2s;
-}
-
-.navlinks a:hover{
-    color:#d889ff;
-}
-
-/* HERO */
-
-.hero{
-    text-align:center;
-    padding:90px 20px 55px;
-}
-
-.badge{
-    display:inline-block;
-    padding:8px 14px;
-    border:1px solid #7020a0;
-    background:rgba(135,38,190,.15);
-    color:#d98cff;
-    border-radius:30px;
-    font-size:12px;
-    margin-bottom:22px;
-}
-
-.hero h1{
-    font-size:clamp(48px,10vw,90px);
-    font-weight:800;
-    line-height:1;
-    color:#fff;
-    text-shadow:
-        0 0 15px #a62eff,
-        0 0 45px rgba(166,46,255,.5);
-}
-
-.hero h1 span{
-    color:#c45cff;
-}
-
-.hero p{
-    max-width:600px;
-    margin:22px auto 0;
-    color:#aaa;
-    line-height:1.7;
-}
-
-/* MAIN */
-
-.container{
-    width:90%;
-    max-width:1050px;
-    margin:auto;
-}
-
-/* WORLD CARD */
-
-.world-card{
+.social-card{
     position:relative;
     overflow:hidden;
-    padding:35px;
+    min-height:390px;
+    padding:45px 30px;
+    text-align:center;
+
+    background:#080808;
+
+    border:1px solid rgba(191,130,255,.65);
     border-radius:24px;
-    background:
-        linear-gradient(145deg,
-        rgba(39,13,55,.95),
-        rgba(13,7,20,.98));
-    border:1px solid rgba(190,76,255,.35);
+
     box-shadow:
-        0 0 50px rgba(145,36,210,.2),
-        inset 0 1px rgba(255,255,255,.05);
+        0 0 25px rgba(139,43,255,.08),
+        inset 0 0 30px rgba(139,43,255,.025);
+
+    transition:.3s ease;
 }
 
-.world-card:before{
-    content:"";
-    position:absolute;
-    width:220px;
-    height:220px;
-    background:#a92eff;
-    filter:blur(100px);
-    opacity:.12;
-    right:-80px;
-    top:-80px;
+.social-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 0 35px rgba(174,67,255,.25),
+        inset 0 0 30px rgba(174,67,255,.04);
 }
 
-.world-top{
+
+/* LOGO */
+
+.social-logo{
+    width:105px;
+    height:105px;
+
+    margin:0 auto 28px;
+
+    border-radius:24px;
+
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:center;
+
+    font-size:55px;
+    font-weight:800;
+
+    color:white;
+
+    box-shadow:0 0 30px rgba(255,255,255,.15);
+}
+
+
+/* DISCORD */
+
+.discord-logo{
+    background:linear-gradient(145deg,#5865f2,#404bd6);
+
+    box-shadow:
+        0 0 30px rgba(88,101,242,.45);
+}
+
+
+/* FACEBOOK */
+
+.facebook-logo{
+    background:linear-gradient(145deg,#1877f2,#0755c9);
+
+    box-shadow:
+        0 0 30px rgba(24,119,242,.4);
+}
+
+
+.social-card h3{
+    font-family:Georgia,serif;
+    font-size:30px;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.social-subtitle{
+    color:#777;
+    font-size:13px;
+    letter-spacing:2px;
     margin-bottom:28px;
 }
 
-.world-title{
-    font-size:13px;
-    color:#9c9c9c;
-    text-transform:uppercase;
-    letter-spacing:2px;
-}
-
-.status{
-    color:#77ffb2;
-    font-size:12px;
-}
-
-.world-name{
-    font-size:clamp(32px,7vw,60px);
-    font-weight:800;
-    color:#fff;
-    margin-bottom:10px;
-}
-
-.world-description{
-    color:#999;
+.social-feature{
+    color:#d0d0d0;
+    font-size:16px;
     margin-bottom:30px;
 }
 
-/* BUTTONS */
+.social-button{
+    display:block;
 
-.buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
+    width:90%;
+    margin:auto;
 
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 23px;
-    border-radius:12px;
+    padding:16px;
+
     text-decoration:none;
-    font-weight:700;
-    font-size:14px;
-    transition:.2s;
-    cursor:pointer;
-}
 
-.primary{
-    color:white;
-    background:linear-gradient(135deg,#b22cff,#7920bd);
-    box-shadow:0 0 25px rgba(165,44,255,.35);
-}
-
-.primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 0 35px rgba(165,44,255,.55);
-}
-
-.secondary{
-    color:#ddd;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.1);
-}
-
-.secondary:hover{
-    background:rgba(255,255,255,.09);
-}
-
-/* INFO GRID */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:20px;
-}
-
-.info{
-    padding:25px;
-    background:rgba(17,9,23,.85);
-    border:1px solid rgba(255,255,255,.07);
-    border-radius:18px;
-}
-
-.info-icon{
-    width:40px;
-    height:40px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:10px;
-    background:rgba(170,48,255,.13);
-    color:#cf70ff;
-    margin-bottom:18px;
-}
-
-.info h3{
-    font-size:16px;
-    margin-bottom:8px;
-}
-
-.info p{
-    color:#888;
     font-size:13px;
-    line-height:1.6;
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    border:1px solid;
+
+    background:rgba(255,255,255,.01);
+
+    transition:.25s;
 }
 
-/* JOIN SECTION */
 
-.join-section{
-    margin-top:20px;
-    padding:40px;
-    text-align:center;
-    border-radius:22px;
-    background:linear-gradient(
-        135deg,
-        rgba(106,23,145,.25),
-        rgba(20,7,28,.8)
-    );
-    border:1px solid rgba(187,63,255,.2);
+/* DISCORD BUTTON */
+
+.discord-button{
+    color:#6875ff;
+    border-color:#4d58d8;
 }
 
-.join-section h2{
-    font-size:28px;
-    margin-bottom:10px;
+.discord-button:hover{
+    color:white;
+    background:#5865f2;
+    box-shadow:0 0 25px rgba(88,101,242,.35);
 }
 
-.join-section p{
-    color:#999;
-    margin-bottom:25px;
+
+/* FACEBOOK BUTTON */
+
+.facebook-button{
+    color:#4595ff;
+    border-color:#1877f2;
 }
 
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:50px 20px 35px;
-    color:#666;
-    font-size:12px;
+.facebook-button:hover{
+    color:white;
+    background:#1877f2;
+    box-shadow:0 0 25px rgba(24,119,242,.35);
 }
 
-.footer-logo{
-    color:#c45cff;
-    font-weight:800;
-    font-size:18px;
-    margin-bottom:10px;
-}
 
 /* MOBILE */
 
 @media(max-width:700px){
 
-    nav{
-        padding:18px 5%;
-    }
-
-    .navlinks{
-        display:none;
-    }
-
-    .hero{
-        padding:70px 20px 40px;
-    }
-
-    .world-card{
-        padding:25px;
-    }
-
-    .grid{
+    .social-grid{
         grid-template-columns:1fr;
     }
 
-    .buttons{
-        flex-direction:column;
+    .social-section{
+        margin-top:55px;
     }
 
-    .btn{
-        width:100%;
+    .social-title h2{
+        font-size:30px;
     }
 
-    .join-section{
-        padding:30px 20px;
+    .social-card{
+        min-height:370px;
     }
+
 }
+
 </style>
-</head>
-
-<body>
-
-<nav>
-
-    <div class="logo">TEAMNOY</div>
-
-    <div class="navlinks">
-        <a href="#world">World</a>
-        <a href="#about">About</a>
-        <a href="#join">Join</a>
-    </div>
-
-</nav>
 
 
-<section class="hero">
+<section class="social-section" id="social">
 
-    <div class="badge">TEAMNOY</div>
+    <div class="social-title">
 
-    <h1>
-        WELCOME TO<br>
-        <span>TEAMNOY</span>
-    </h1>
-
-    <p>
-        A community built for players, friends and people
-        who want to be part of the team.
-    </p>
-
-</section>
-
-
-<main class="container">
-
-
-<section class="world-card" id="world">
-
-    <div class="world-top">
-
-        <div class="TEAMNOY YNTEL">
-            CURRENT WORLD
+        <div class="small-title">
+            TEAMNOY COMMUNITY
         </div>
 
-        <div class="status">
-            ● ONLINE
+        <h2>
+            GROUP COMMUNITY
+        </h2>
+
+        <p>
+            Connect with TeamNoy members
+        </p>
+
+    </div>
+
+
+    <div class="social-grid">
+
+
+        <!-- DISCORD -->
+
+        <div class="social-card">
+
+            <div class="social-logo discord-logo">
+                <span>☯</span>
+            </div>
+
+            <h3>
+                DISCORD GROUP
+            </h3>
+
+            <div class="social-subtitle">
+                JOIN OUR SERVER
+            </div>
+
+            <div class="social-feature">
+                💬 &nbsp; Connect with Members
+            </div>
+
+            <!-- PALITAN ANG LINK -->
+
+            <a
+                class="social-button discord-button"
+                href="https://discord.gg/YOURINVITE"
+                target="_blank">
+
+                JOIN DISCORD
+
+            </a>
+
         </div>
 
-    </div>
 
 
-    <!-- PALITAN ANG WORLD NAME DITO -->
+        <!-- FACEBOOK -->
 
-    <div class="world-name" id="worldName">
-        TEAMNOY YNTEL
-    </div>
+        <div class="social-card">
 
-    <div class="world-description">
-        Join our current world and become part of TeamNoy.
-    </div>
+            <div class="social-logo facebook-logo">
+                <span>f</span>
+            </div>
 
+            <h3>
+                FACEBOOK GROUP
+            </h3>
 
-    <div class="buttons">
+            <div class="social-subtitle">
+                FOLLOW OUR COMMUNITY
+            </div>
 
-        <!-- PALITAN ANG WORLD LINK DITO -->
+            <div class="social-feature">
+                👥 &nbsp; Connect with TeamNoy
+            </div>
 
-        </a>
+            <!-- https://www.facebook.com/kristel.mirandilla.7 -->
 
-        <button
-        class="btn secondary"
-        onclick="copyWorld()">
-            COPY WORLD
-        </button>
+            <a
+                class="social-button facebook-button"
+                href="https://facebook.com/YOURPAGE"
+                target="_blank">
 
-    </div>
+                FOLLOW FACEBOOK
 
-</section>
+            </a>
 
+        </div>
 
-<section class="grid" id="about">
-
-    <div class="info">
-
-        <div class="info-icon">★</div>
-
-        <h3>Team NOY</h3>
-
-        <p>
-            Meet other players and become part
-            of the TeamNoy community.
-        </p>
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-icon">◆</div>
-
-        <h3>TEAMNOY YNTEL</h3>
-
-        <p>
-            Check the current world above and
-            enter whenever you want.
-        </p>
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-icon">✓</div>
-
-        <h3>Always Updated</h3>
-
-        <p>
-            World information can be updated
-            whenever your team changes worlds.
-        </p>
 
     </div>
 
 </section>
-
-
-<section class="join-section" id="join">
-
-    <h2>WANT TO JOIN TEAMNOY?</h2>
-
-    <p>
-      DI PA ALAM ILALAGAY.
-    </p>
-
-    <a
-    class="btn primary"
-    id="joinButton"
-    href="https://example.com"
-    target="_blank">
-        JOIN TEAMNOY
-    </a>
-
-</section>
-
-
-</main>
-
-
-<footer>
-
-    <div class="footer-logo">
-        TEAMNOY
-    </div>
-
-    <div>
-        © 2026 TEAMNOY. All rights reserved.
-    </div>
-
-</footer>
-
-
-<script>
-
-/*
-========================================
-TEAMNOY WORLD SETTINGS
-========================================
-
-PALITAN LANG ANG DALAWANG VALUE NA ITO.
-
-WORLD NAME:
-TEAMNOY
-
-========================================
-*/
-
-const WORLD_NAME = "TEAM NOY SAMPLE SITE";
-
-
-/* AUTOMATIC — WAG GALAWIN */
-
-document.getElementById("worldName").textContent = WORLD_NAME;
-
-document.getElementById("worldButton").href = WORLD_LINK;
-
-document.getElementById("joinButton").href = WORLD_LINK;
-
-
-function copyWorld(){
-
-    navigator.clipboard.writeText(WORLD_NAME);
-
-    const button = document.querySelector(".secondary");
-
-    const oldText = button.textContent;
-
-    button.textContent = "COPIED!";
-
-    setTimeout(() => {
-
-        button.textContent = oldText;
-
-    },1500);
-
-}
-
-</script>
-
-</body>
-</html>
