@@ -23,8 +23,6 @@ body{
     min-height:100vh;
 }
 
-/* NAVBAR */
-
 nav{
     width:100%;
     padding:22px 7%;
@@ -56,14 +54,11 @@ nav{
     color:#aaa;
     text-decoration:none;
     font-size:14px;
-    transition:.2s;
 }
 
 .navlinks a:hover{
     color:#d889ff;
 }
-
-/* HERO */
 
 .hero{
     text-align:center;
@@ -85,7 +80,6 @@ nav{
     font-size:clamp(48px,10vw,90px);
     font-weight:800;
     line-height:1;
-    color:#fff;
     text-shadow:
         0 0 15px #a62eff,
         0 0 45px rgba(166,46,255,.5);
@@ -102,25 +96,22 @@ nav{
     line-height:1.7;
 }
 
-/* MAIN */
-
 .container{
     width:90%;
     max-width:1050px;
     margin:auto;
 }
 
-/* WORLD CARD */
-
 .world-card{
     position:relative;
     overflow:hidden;
     padding:35px;
     border-radius:24px;
-    background:
-        linear-gradient(145deg,
+    background:linear-gradient(
+        145deg,
         rgba(39,13,55,.95),
-        rgba(13,7,20,.98));
+        rgba(13,7,20,.98)
+    );
     border:1px solid rgba(190,76,255,.35);
     box-shadow:
         0 0 50px rgba(145,36,210,.2),
@@ -161,7 +152,6 @@ nav{
 .world-name{
     font-size:clamp(32px,7vw,60px);
     font-weight:800;
-    color:#fff;
     margin-bottom:10px;
 }
 
@@ -169,8 +159,6 @@ nav{
     color:#999;
     margin-bottom:30px;
 }
-
-/* BUTTONS */
 
 .buttons{
     display:flex;
@@ -189,7 +177,6 @@ nav{
     font-size:14px;
     transition:.2s;
     cursor:pointer;
-    border:none;
 }
 
 .primary{
@@ -208,12 +195,6 @@ nav{
     background:rgba(255,255,255,.05);
     border:1px solid rgba(255,255,255,.1);
 }
-
-.secondary:hover{
-    background:rgba(255,255,255,.09);
-}
-
-/* INFO GRID */
 
 .grid{
     display:grid;
@@ -252,7 +233,98 @@ nav{
     line-height:1.6;
 }
 
-/* JOIN SECTION */
+/* GROUP COMMUNITY */
+
+.community-section{
+    margin-top:60px;
+}
+
+.community-title{
+    text-align:center;
+    font-size:32px;
+    font-weight:800;
+    margin-bottom:30px;
+    text-shadow:0 0 20px #a62eff;
+}
+
+.community-card{
+    padding:40px 30px;
+    margin-bottom:20px;
+    text-align:center;
+    border-radius:24px;
+    background:linear-gradient(
+        145deg,
+        rgba(39,13,55,.95),
+        rgba(13,7,20,.98)
+    );
+    box-shadow:0 0 40px rgba(145,36,210,.18);
+}
+
+.community-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    font-weight:800;
+    color:white;
+}
+
+.facebook-icon{
+    background:#1877f2;
+    box-shadow:0 0 30px rgba(24,119,242,.5);
+}
+
+.discord-icon{
+    background:#5865f2;
+    box-shadow:0 0 30px rgba(88,101,242,.5);
+}
+
+.community-card h2{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.community-subtitle{
+    color:#999;
+    font-size:14px;
+    letter-spacing:1px;
+    margin-bottom:25px;
+}
+
+.community-text{
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+.community-btn{
+    display:block;
+    width:100%;
+    padding:16px;
+    text-decoration:none;
+    font-weight:800;
+    letter-spacing:2px;
+    background:rgba(255,255,255,.02);
+    transition:.2s;
+}
+
+.community-btn:hover{
+    transform:translateY(-2px);
+}
+
+.facebook-btn{
+    color:#4da3ff;
+    border:1px solid #1877f2;
+}
+
+.discord-btn{
+    color:#8b7cff;
+    border:1px solid #5865f2;
+}
 
 .join-section{
     margin-top:20px;
@@ -277,139 +349,6 @@ nav{
     margin-bottom:25px;
 }
 
-/* GROUP COMMUNITY */
-
-.community-section{
-    margin-top:65px;
-}
-
-.community-title{
-    text-align:center;
-    font-size:clamp(28px,6vw,40px);
-    font-weight:800;
-    margin-bottom:30px;
-    color:#fff;
-    text-shadow:
-        0 0 15px #a62eff,
-        0 0 35px rgba(166,46,255,.4);
-}
-
-.community-card{
-    position:relative;
-    overflow:hidden;
-    padding:45px 35px;
-    margin-bottom:20px;
-    text-align:center;
-    border-radius:24px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(39,13,55,.95),
-            rgba(13,7,20,.98)
-        );
-    border:1px solid rgba(190,76,255,.35);
-    box-shadow:
-        0 0 40px rgba(145,36,210,.15),
-        inset 0 1px rgba(255,255,255,.05);
-}
-
-.community-icon{
-    width:90px;
-    height:90px;
-    margin:0 auto 25px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:22px;
-}
-
-.community-icon svg{
-    width:55px;
-    height:55px;
-    fill:white;
-}
-
-/* FACEBOOK */
-
-.facebook-icon{
-    background:#1877f2;
-    box-shadow:
-        0 0 25px rgba(24,119,242,.45),
-        0 0 50px rgba(24,119,242,.2);
-}
-
-.facebook-card{
-    border-color:rgba(24,119,242,.45);
-}
-
-.facebook-card h2{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.facebook-btn{
-    color:#4da3ff;
-    border:1px solid #1877f2;
-    box-shadow:0 0 15px rgba(24,119,242,.12);
-}
-
-/* DISCORD */
-
-.discord-icon{
-    background:#5865f2;
-    box-shadow:
-        0 0 25px rgba(88,101,242,.5),
-        0 0 50px rgba(88,101,242,.2);
-}
-
-.discord-card{
-    border-color:rgba(88,101,242,.45);
-}
-
-.discord-card h2{
-    font-size:28px;
-    margin-bottom:10px;
-}
-
-.discord-btn{
-    color:#8b7cff;
-    border:1px solid #5865f2;
-    box-shadow:0 0 15px rgba(88,101,242,.12);
-}
-
-/* COMMUNITY TEXT */
-
-.community-subtitle{
-    color:#999;
-    margin-bottom:25px;
-    font-size:14px;
-    letter-spacing:1px;
-}
-
-.community-text{
-    color:#ddd;
-    font-size:18px;
-    margin-bottom:28px;
-}
-
-.community-btn{
-    display:block;
-    width:100%;
-    padding:16px;
-    text-decoration:none;
-    font-weight:800;
-    letter-spacing:2px;
-    background:rgba(255,255,255,.02);
-    transition:.2s;
-}
-
-.community-btn:hover{
-    transform:translateY(-2px);
-    background:rgba(255,255,255,.06);
-}
-
-/* FOOTER */
-
 footer{
     text-align:center;
     padding:50px 20px 35px;
@@ -423,8 +362,6 @@ footer{
     font-size:18px;
     margin-bottom:10px;
 }
-
-/* MOBILE */
 
 @media(max-width:700px){
 
@@ -460,18 +397,9 @@ footer{
         padding:30px 20px;
     }
 
-    .community-section{
-        margin-top:50px;
-    }
-
     .community-card{
-        padding:40px 25px;
+        padding:35px 22px;
     }
-
-    .community-card h2{
-        font-size:24px;
-    }
-
 }
 </style>
 </head>
@@ -594,7 +522,8 @@ footer{
 
 </section>
 
-<!-- GROUP COMMUNITY -->
+
+<!-- FACEBOOK SA TAAS, DISCORD SA BABA -->
 
 <section class="community-section" id="community">
 
@@ -604,14 +533,10 @@ footer{
 
     <!-- FACEBOOK -->
 
-    <div class="community-card facebook-card">
+    <div class="community-card">
 
         <div class="community-icon facebook-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M14 8h3V4h-3c-3.31 0-6 2.69-6 6v2H5v4h3v8h4v-8h3l1-4h-4v-2c0-1.1.9-2 2-2z"/>
-            </svg>
-
+            f
         </div>
 
         <h2>FACEBOOK GROUP</h2>
@@ -634,16 +559,13 @@ footer{
 
     </div>
 
+
     <!-- DISCORD -->
 
-    <div class="community-card discord-card">
+    <div class="community-card">
 
         <div class="community-icon discord-icon">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M19.54 5.29A16.3 16.3 0 0 0 15.5 4l-.5 1.02a14.6 14.6 0 0 0-6 0L8.5 4a16.3 16.3 0 0 0-4.04 1.29C1.91 9.15 1.2 12.9 1.56 16.6a16.3 16.3 0 0 0 4.97 2.52l1.2-1.65c-.66-.24-1.28-.54-1.86-.9l.45-.35c3.6 1.69 7.5 1.69 11.05 0l.46.35c-.58.36-1.2.66-1.86.9l1.2 1.65a16.3 16.3 0 0 0 4.97-2.52c.42-4.28-.72-7.99-2.6-11.31zM8.52 14.37c-1.05 0-1.92-.96-1.92-2.14s.84-2.14 1.92-2.14c1.08 0 1.94.96 1.92 2.14 0 1.18-.84 2.14-1.92 2.14zm6.96 0c-1.05 0-1.92-.96-1.92-2.14s.84-2.14 1.92-2.14c1.08 0 1.94.96 1.92 2.14 0 1.18-.84 2.14-1.92 2.14z"/>
-            </svg>
-
+            ☁
         </div>
 
         <h2>DISCORD GROUP</h2>
@@ -667,6 +589,7 @@ footer{
     </div>
 
 </section>
+
 
 <section class="join-section" id="join">
 
@@ -705,28 +628,19 @@ footer{
 
 /* ================================
    TEAMNOY SETTINGS
+   PALITAN LANG ANG MGA LINK DITO
 ================================ */
-
-/* WORLD */
 
 const WORLD_NAME = "TEAMNOY";
 
 const WORLD_LINK = "https://example.com";
 
-
-/* FACEBOOK GROUP */
-
 const FACEBOOK_LINK = "https://facebook.com/YOUR_GROUP";
-
-
-/* DISCORD SERVER */
 
 const DISCORD_LINK = "https://discord.gg/YOUR_SERVER";
 
 
-/* ================================
-   AUTOMATIC
-================================ */
+/* AUTOMATIC */
 
 document.getElementById("worldName").textContent = WORLD_NAME;
 
