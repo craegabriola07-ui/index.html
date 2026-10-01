@@ -189,6 +189,7 @@ nav{
     font-size:14px;
     transition:.2s;
     cursor:pointer;
+    border:none;
 }
 
 .primary{
@@ -276,6 +277,137 @@ nav{
     margin-bottom:25px;
 }
 
+/* GROUP COMMUNITY */
+
+.community-section{
+    margin-top:65px;
+}
+
+.community-title{
+    text-align:center;
+    font-size:clamp(28px,6vw,40px);
+    font-weight:800;
+    margin-bottom:30px;
+    color:#fff;
+    text-shadow:
+        0 0 15px #a62eff,
+        0 0 35px rgba(166,46,255,.4);
+}
+
+.community-card{
+    position:relative;
+    overflow:hidden;
+    padding:45px 35px;
+    margin-bottom:20px;
+    text-align:center;
+    border-radius:24px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(39,13,55,.95),
+            rgba(13,7,20,.98)
+        );
+    border:1px solid rgba(190,76,255,.35);
+    box-shadow:
+        0 0 40px rgba(145,36,210,.15),
+        inset 0 1px rgba(255,255,255,.05);
+}
+
+.community-icon{
+    width:90px;
+    height:90px;
+    margin:0 auto 25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:22px;
+}
+
+.community-icon svg{
+    width:55px;
+    height:55px;
+    fill:white;
+}
+
+/* FACEBOOK */
+
+.facebook-icon{
+    background:#1877f2;
+    box-shadow:
+        0 0 25px rgba(24,119,242,.45),
+        0 0 50px rgba(24,119,242,.2);
+}
+
+.facebook-card{
+    border-color:rgba(24,119,242,.45);
+}
+
+.facebook-card h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.facebook-btn{
+    color:#4da3ff;
+    border:1px solid #1877f2;
+    box-shadow:0 0 15px rgba(24,119,242,.12);
+}
+
+/* DISCORD */
+
+.discord-icon{
+    background:#5865f2;
+    box-shadow:
+        0 0 25px rgba(88,101,242,.5),
+        0 0 50px rgba(88,101,242,.2);
+}
+
+.discord-card{
+    border-color:rgba(88,101,242,.45);
+}
+
+.discord-card h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.discord-btn{
+    color:#8b7cff;
+    border:1px solid #5865f2;
+    box-shadow:0 0 15px rgba(88,101,242,.12);
+}
+
+/* COMMUNITY TEXT */
+
+.community-subtitle{
+    color:#999;
+    margin-bottom:25px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.community-text{
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+.community-btn{
+    display:block;
+    width:100%;
+    padding:16px;
+    text-decoration:none;
+    font-weight:800;
+    letter-spacing:2px;
+    background:rgba(255,255,255,.02);
+    transition:.2s;
+}
+
+.community-btn:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.06);
+}
+
 /* FOOTER */
 
 footer{
@@ -327,6 +459,19 @@ footer{
     .join-section{
         padding:30px 20px;
     }
+
+    .community-section{
+        margin-top:50px;
+    }
+
+    .community-card{
+        padding:40px 25px;
+    }
+
+    .community-card h2{
+        font-size:24px;
+    }
+
 }
 </style>
 </head>
@@ -340,11 +485,11 @@ footer{
     <div class="navlinks">
         <a href="#world">World</a>
         <a href="#about">About</a>
+        <a href="#community">Community</a>
         <a href="#join">Join</a>
     </div>
 
 </nav>
-
 
 <section class="hero">
 
@@ -362,9 +507,7 @@ footer{
 
 </section>
 
-
 <main class="container">
-
 
 <section class="world-card" id="world">
 
@@ -380,9 +523,6 @@ footer{
 
     </div>
 
-
-    <!-- PALITAN ANG WORLD NAME DITO -->
-
     <div class="world-name" id="worldName">
         TEAMNOY
     </div>
@@ -391,10 +531,7 @@ footer{
         Join our current world and become part of TeamNoy.
     </div>
 
-
     <div class="buttons">
-
-        <!-- PALITAN ANG WORLD LINK DITO -->
 
         <a
         class="btn primary"
@@ -414,24 +551,143 @@ footer{
 
 </section>
 
-
 <section class="grid" id="about">
 
     <div class="info">
 
         <div class="info-icon">★</div>
 
-const FACEBOOK_LINK = "https://facebook.com/YOUR_GROUP";
-const DISCORD_LINK = "https://discord.gg/YOUR_SERVER";
+        <h3>Team Community</h3>
 
-document.getElementById("facebookButton").href = FACEBOOK_LINK;
-document.getElementById("discordButton").href = DISCORD_LINK;
+        <p>
+            Meet other players and become part
+            of the TeamNoy community.
+        </p>
+
+    </div>
+
+    <div class="info">
+
+        <div class="info-icon">◆</div>
+
+        <h3>Current World</h3>
+
+        <p>
+            Check the current world above and
+            enter whenever you want.
+        </p>
+
+    </div>
+
+    <div class="info">
+
+        <div class="info-icon">✓</div>
+
+        <h3>Always Updated</h3>
+
+        <p>
+            World information can be updated
+            whenever your team changes worlds.
+        </p>
+
+    </div>
 
 </section>
 
+<!-- GROUP COMMUNITY -->
+
+<section class="community-section" id="community">
+
+    <div class="community-title">
+        GROUP COMMUNITY
+    </div>
+
+    <!-- FACEBOOK -->
+
+    <div class="community-card facebook-card">
+
+        <div class="community-icon facebook-icon">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M14 8h3V4h-3c-3.31 0-6 2.69-6 6v2H5v4h3v8h4v-8h3l1-4h-4v-2c0-1.1.9-2 2-2z"/>
+            </svg>
+
+        </div>
+
+        <h2>FACEBOOK GROUP</h2>
+
+        <p class="community-subtitle">
+            JOIN OUR FACEBOOK GROUP
+        </p>
+
+        <p class="community-text">
+            💬 Connect with Members
+        </p>
+
+        <a
+        class="community-btn facebook-btn"
+        id="facebookButton"
+        href="https://facebook.com"
+        target="_blank">
+            JOIN FACEBOOK
+        </a>
+
+    </div>
+
+    <!-- DISCORD -->
+
+    <div class="community-card discord-card">
+
+        <div class="community-icon discord-icon">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M19.54 5.29A16.3 16.3 0 0 0 15.5 4l-.5 1.02a14.6 14.6 0 0 0-6 0L8.5 4a16.3 16.3 0 0 0-4.04 1.29C1.91 9.15 1.2 12.9 1.56 16.6a16.3 16.3 0 0 0 4.97 2.52l1.2-1.65c-.66-.24-1.28-.54-1.86-.9l.45-.35c3.6 1.69 7.5 1.69 11.05 0l.46.35c-.58.36-1.2.66-1.86.9l1.2 1.65a16.3 16.3 0 0 0 4.97-2.52c.42-4.28-.72-7.99-2.6-11.31zM8.52 14.37c-1.05 0-1.92-.96-1.92-2.14s.84-2.14 1.92-2.14c1.08 0 1.94.96 1.92 2.14 0 1.18-.84 2.14-1.92 2.14zm6.96 0c-1.05 0-1.92-.96-1.92-2.14s.84-2.14 1.92-2.14c1.08 0 1.94.96 1.92 2.14 0 1.18-.84 2.14-1.92 2.14z"/>
+            </svg>
+
+        </div>
+
+        <h2>DISCORD GROUP</h2>
+
+        <p class="community-subtitle">
+            JOIN OUR SERVER
+        </p>
+
+        <p class="community-text">
+            💬 Connect with Members
+        </p>
+
+        <a
+        class="community-btn discord-btn"
+        id="discordButton"
+        href="https://discord.com"
+        target="_blank">
+            JOIN DISCORD
+        </a>
+
+    </div>
+
+</section>
+
+<section class="join-section" id="join">
+
+    <h2>WANT TO JOIN TEAMNOY?</h2>
+
+    <p>
+        Enter the current world and connect
+        with the community.
+    </p>
+
+    <a
+    class="btn primary"
+    id="joinButton"
+    href="https://example.com"
+    target="_blank">
+        JOIN TEAMNOY
+    </a>
+
+</section>
 
 </main>
-
 
 <footer>
 
@@ -445,31 +701,32 @@ document.getElementById("discordButton").href = DISCORD_LINK;
 
 </footer>
 
-
 <script>
 
-/*
-========================================
-TEAMNOY WORLD SETTINGS
-========================================
+/* ================================
+   TEAMNOY SETTINGS
+================================ */
 
-PALITAN LANG ANG DALAWANG VALUE NA ITO.
-
-WORLD NAME:
-TEAMNOY
-
-WORLD LINK:
-https://example.com
-
-========================================
-*/
+/* WORLD */
 
 const WORLD_NAME = "TEAMNOY";
 
 const WORLD_LINK = "https://example.com";
 
 
-/* AUTOMATIC — WAG GALAWIN */
+/* FACEBOOK GROUP */
+
+const FACEBOOK_LINK = "https://facebook.com/YOUR_GROUP";
+
+
+/* DISCORD SERVER */
+
+const DISCORD_LINK = "https://discord.gg/YOUR_SERVER";
+
+
+/* ================================
+   AUTOMATIC
+================================ */
 
 document.getElementById("worldName").textContent = WORLD_NAME;
 
@@ -477,6 +734,12 @@ document.getElementById("worldButton").href = WORLD_LINK;
 
 document.getElementById("joinButton").href = WORLD_LINK;
 
+document.getElementById("facebookButton").href = FACEBOOK_LINK;
+
+document.getElementById("discordButton").href = DISCORD_LINK;
+
+
+/* COPY WORLD */
 
 function copyWorld(){
 
